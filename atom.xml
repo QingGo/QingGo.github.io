@@ -6,7 +6,7 @@
   <link href="https://qinggo.github.io/atom.xml" rel="self"/>
   
   <link href="https://qinggo.github.io/"/>
-  <updated>2021-11-25T14:59:23.101Z</updated>
+  <updated>2021-11-25T15:22:31.211Z</updated>
   <id>https://qinggo.github.io/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>What is Devops and SRE</title>
+    <link href="https://qinggo.github.io/2021/11/25/What-is-Devops-and-SRE/"/>
+    <id>https://qinggo.github.io/2021/11/25/What-is-Devops-and-SRE/</id>
+    <published>2021-11-25T15:21:36.000Z</published>
+    <updated>2021-11-25T15:22:31.211Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;A short note of &lt;a href=&quot;https://www.youtube.com/watch?v=0UyrVqBoCAU&quot;&gt;DevOps Vs. SRE: Competing Standards or Friends? (Cloud Next</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>以终为始</title>
