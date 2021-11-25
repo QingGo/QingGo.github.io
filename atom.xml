@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>QingGo的碎碎念</title>
+  <icon>https://qinggo.github.io/icon.png</icon>
+  
+  <link href="https://qinggo.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://qinggo.github.io/"/>
+  <updated>2021-11-25T14:59:23.101Z</updated>
+  <id>https://qinggo.github.io/</id>
+  
+  <author>
+    <name>QingGo</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>以终为始</title>
+    <link href="https://qinggo.github.io/2021/11/25/%E4%BB%A5%E7%BB%88%E4%B8%BA%E5%A7%8B/"/>
+    <id>https://qinggo.github.io/2021/11/25/%E4%BB%A5%E7%BB%88%E4%B8%BA%E5%A7%8B/</id>
+    <published>2021-11-25T14:16:29.000Z</published>
+    <updated>2021-11-25T14:59:23.101Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;我经常会陷入一些细枝末节的地方，相对地，缺乏宏观的思考。比如说：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;陷入担心落后于同龄人的焦虑。&lt;/li&gt;
+&lt;li&gt;想着怎样可以拿到更高的工资。&lt;/li&gt;
+&lt;li&gt;发现出国是个不错的选择。&lt;/li&gt;
+&lt;li&gt;觉得欧美国家的留学费用太贵，几年内承担不起</summary>
+        
+      
+    
+    
+    
+    
+    <category term="随想" scheme="https://qinggo.github.io/tags/%E9%9A%8F%E6%83%B3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello Hexo</title>
+    <link href="https://qinggo.github.io/2020/05/10/Hello-Hexo/"/>
+    <id>https://qinggo.github.io/2020/05/10/Hello-Hexo/</id>
+    <published>2020-05-10T07:00:14.000Z</published>
+    <updated>2021-11-25T14:12:28.429Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;一番折腾终于在github pages部署好了基于Hexo的博客，&lt;a href=&quot;https://qinggo.github.io/&quot;&gt;页面地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;同时也尝试用Github actions + React把生成后的静态页面自动部署到Github</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
