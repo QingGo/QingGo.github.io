@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://qinggo.github.io/sitemap.xml

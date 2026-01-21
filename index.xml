@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>QingGo的碎碎念</title><link>https://qinggo.github.io/</link><description>Recent content on QingGo的碎碎念</description><generator>Hugo -- 0.154.5</generator><language>zh-Hans</language><lastBuildDate>Wed, 21 Jan 2026 12:43:11 +0800</lastBuildDate><atom:link href="https://qinggo.github.io/index.xml" rel="self" type="application/rss+xml"/><item><title>What is Devops and SRE</title><link>https://qinggo.github.io/2021/11/25/what-is-devops-and-sre/</link><pubDate>Thu, 25 Nov 2021 23:21:36 +0800</pubDate><guid>https://qinggo.github.io/2021/11/25/what-is-devops-and-sre/</guid><description>&lt;p&gt;A short note of &lt;a href="https://www.youtube.com/watch?v=0UyrVqBoCAU"&gt;DevOps Vs. SRE: Competing Standards or Friends? (Cloud Next &amp;lsquo;19)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Devops is:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Reduce Organization Silos&lt;/li&gt;
+&lt;li&gt;Accept Failure as Normal&lt;/li&gt;
+&lt;li&gt;Implement Gradual Change&lt;/li&gt;
+&lt;li&gt;Leverage Tooling &amp;amp; Automation&lt;/li&gt;
+&lt;li&gt;Measure Everything&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Class SRE implements DevOps&lt;/p&gt;</description></item><item><title>以终为始</title><link>https://qinggo.github.io/2021/11/25/%E4%BB%A5%E7%BB%88%E4%B8%BA%E5%A7%8B/</link><pubDate>Thu, 25 Nov 2021 22:16:29 +0800</pubDate><guid>https://qinggo.github.io/2021/11/25/%E4%BB%A5%E7%BB%88%E4%B8%BA%E5%A7%8B/</guid><description>&lt;p&gt;我经常会陷入一些细枝末节的地方，相对地，缺乏宏观的思考。比如说：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;陷入担心落后于同龄人的焦虑。&lt;/li&gt;
+&lt;li&gt;想着怎样可以拿到更高的工资。&lt;/li&gt;
+&lt;li&gt;发现出国是个不错的选择。&lt;/li&gt;
+&lt;li&gt;觉得欧美国家的留学费用太贵，几年内承担不起，但是过多几年好像又太晚了。&lt;/li&gt;
+&lt;li&gt;于是转而考虑日本。&lt;/li&gt;
+&lt;li&gt;发现日本东京大学招生要看托福成绩，虽然还有很多要求，不过就只是先关注到这点。&lt;/li&gt;
+&lt;li&gt;开始计划打算要背单词。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;把这些思绪写下来，也给了我自己一个仔细推敲自己的思维过程的机会。
+首先，逻辑缺乏推敲，比如从1到2，难道工资落后了就是落后了吗？从2到3，难道除了出国没有更好的赚钱选择了吗？从7回到1，难道背单词我就可以超过同龄人了吗？
+其次，我缺少对人生目标的思考。即使落后于人了又怎么样，前面总有我赶不上的对手，我的人生目标就只是跑在别人前面获得满足感吗？&lt;/p&gt;
+&lt;h3 id="怎么可能"&gt;&lt;strong&gt;怎么可能&lt;/strong&gt;&lt;/h3&gt;
+&lt;h3 id="但是我却又一时无法说出自己的人生目标会是什么"&gt;&lt;strong&gt;但是我却又一时无法说出自己的人生目标会是什么&lt;/strong&gt;&lt;/h3&gt;
+&lt;p&gt;这就回到开头的结论了，我经常因为日常的事务而牵动思绪，为工作和学习动用头脑，但是很少有思考人生目标。这有点太过宏大，让我有点下意识地逃避去思考这个。但是如果不强迫自己去思考这个，我也许就一直不会想清楚这件事情，在人生路上南辕北辙。也许不少人也和我一样，但这确实是个坏习惯。&lt;/p&gt;
+&lt;p&gt;前一阵子读了《高效能人士的七个习惯》，里面第二个习惯就是“以终为始”。里面有提到一个思考人生目标的办法。假设你已经死了，作为一个灵魂参加自己的丧礼。一切世间的物质财富已经与你无关了，你看着悲痛的亲友们陆续上台致辞。想象一下自己正处于这个场景，这时候，你会最希望听到他们怎么评价你自己？&lt;/p&gt;
+&lt;p&gt;你是个可靠的同事？你是个让孩子尊敬的父亲？你是个让父母骄傲的孩子？——你最想听到的是什么？&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;思考完人生目标之后，然后才轮到规划接下来的路线。而规划的时候，要牢记自己目标，时刻提醒自己不是只有这么一条路可以走。这时候，金字塔思维是个不错的工具。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;比如我要赚钱的话，除了出国，在国内的工作上做出业绩行不行，或者创业行不行？远程接国外的工作行不行？&lt;/li&gt;
+&lt;li&gt;比如我要出国的话，一定要通过留学吗？transfer 行不行，工作签证行不行？&lt;/li&gt;
+&lt;li&gt;那如果我要在国内的工作上做出业绩的话，我要拥有到怎样的能力，我现在是怎样的能力，我的目标是谁，我们能力上有什么差距，我们做事上有什么差距。&lt;/li&gt;
+&lt;li&gt;然后在能力的差距上，技术能力是一部分，软技能也是一部分。&lt;/li&gt;
+&lt;li&gt;技术能力又包括什么？软技能又包括什么？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;自顶向下，不重不漏。把实现目标的各个可能性考虑到，也把实现目标需要的各个因素考虑到。&lt;/p&gt;
+&lt;p&gt;这篇文章是我整理自己思考一个工具，但如果你读到了，也希望可以对你产生帮助。&lt;/p&gt;</description></item><item><title>Hello Hexo</title><link>https://qinggo.github.io/2020/05/10/hello-hexo/</link><pubDate>Sun, 10 May 2020 15:00:14 +0800</pubDate><guid>https://qinggo.github.io/2020/05/10/hello-hexo/</guid><description>&lt;p&gt;一番折腾终于在github pages部署好了基于Hexo的博客，&lt;a href="https://qinggo.github.io/"&gt;页面地址&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;同时也尝试用Github actions + React把生成后的静态页面自动部署到Github pages上，&lt;a href="https://qinggo.github.io/react_blog/"&gt;页面地址&lt;/a&gt;，这个以后在学习React的过程中应该会慢慢搭建起来。&lt;/p&gt;
+&lt;p&gt;另外以后会在这个基于Hexo的博客不定期地发布一些碎碎念，有关于编程的，有关于生活的。等到基于React的博客建好以后也许会把内容迁过去。&lt;/p&gt;
+&lt;p&gt;原本打算换一个主题使用Next的，但发现有个bug导致链接不能正常生成，后面会多一个20%，感觉像是themes\next\layout_macro\sidebar.swig里的trim函数没处理好。而&lt;a href="https://github.com/iissnan/hexo-theme-next"&gt;Next代码仓库&lt;/a&gt;的Latest commit是在一年多前的21 Mar 2019。以后换主题得注意代码仓库是否还在维护，现在还是先继续用原版的landscape好了。&lt;/p&gt;
+&lt;p&gt;最后以乔布斯的一句名言结尾吧，也作为我和读到这篇文章的朋友们的共勉：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Stay Hungry. Stay Foolish.&lt;/p&gt;
+&lt;/blockquote&gt;</description></item></channel></rss>
