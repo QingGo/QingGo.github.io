@@ -1,4 +1,21 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Machine Learning on QingGo的碎碎念</title><link>https://qinggo.github.io/tags/machine-learning/</link><description>Recent content in Machine Learning on QingGo的碎碎念</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 16 Mar 2026 11:13:23 +0800</lastBuildDate><atom:link href="https://qinggo.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml"/><item><title>《Deep Learning》Summary</title><link>https://qinggo.github.io/notes/deep-learning-goodfellow/</link><pubDate>Mon, 16 Mar 2026 10:51:34 +0800</pubDate><guid>https://qinggo.github.io/notes/deep-learning-goodfellow/</guid><description>&lt;p&gt;&lt;img alt="《Deep Learning》思维导图" loading="lazy" src="https://qinggo.github.io/images/deep-learning-goodfellow-mindmap.png"&gt;&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Machine Learning on QingGo的碎碎念</title><link>https://qinggo.github.io/tags/machine-learning/</link><description>Recent content in Machine Learning on QingGo的碎碎念</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Fri, 20 Mar 2026 12:45:11 +0800</lastBuildDate><atom:link href="https://qinggo.github.io/tags/machine-learning/index.xml" rel="self" type="application/rss+xml"/><item><title>Probabilistic Machine Learn Advanced Topics Summary</title><link>https://qinggo.github.io/notes/probabilistic-machine-learn-advanced-topics-summary/</link><pubDate>Fri, 20 Mar 2026 11:15:01 +0800</pubDate><guid>https://qinggo.github.io/notes/probabilistic-machine-learn-advanced-topics-summary/</guid><description>&lt;p&gt;&lt;img alt="MLAPP-2-2-mindmap.png" loading="lazy" src="https://qinggo.github.io/images/MLAPP-2-2-mindmap.png"&gt;&lt;/p&gt;
+&lt;h1 id="probabilistic-machine-learning-advanced-topics第1章introduction详细讲解"&gt;《Probabilistic Machine Learning: Advanced Topics》第1章“Introduction”详细讲解&lt;/h1&gt;
+&lt;h2 id="1-引言从曲线拟合到世界理解"&gt;1. 引言：从“曲线拟合”到“世界理解”&lt;/h2&gt;
+&lt;p&gt;本章作为全书的开篇，旨在说明传统机器学习（尤其是深度学习）的局限性，并勾勒出本书将要探讨的更广阔领域——如何从“模式识别”走向对世界更深刻的理解和建模。&lt;/p&gt;
+&lt;h3 id="11-传统机器学习的本质"&gt;1.1 传统机器学习的本质&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;核心任务&lt;/strong&gt;：学习一个从输入 $ \mathcal{X} $ 到输出 $ \mathcal{Y} $ 的映射函数 $ f $，即 $ f: \mathcal{X} \to \mathcal{Y} $。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;常见形式&lt;/strong&gt;：
+&lt;ul&gt;
+&lt;li&gt;分类问题：$ \mathcal{Y} = \{1,\dots,C\} $（离散标签）&lt;/li&gt;
+&lt;li&gt;回归问题：$ \mathcal{Y} = \mathbb{R} $（连续值）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;代表方法&lt;/strong&gt;：深度神经网络（DNN）、支持向量机、逻辑回归等。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;经典评价&lt;/strong&gt;：图灵奖得主 Judea Pearl 将这种范式称为 &lt;strong&gt;“glorified curve fitting”&lt;/strong&gt;（华丽的曲线拟合）——即模型只学习输入输出之间的相关性，而不理解背后的因果关系和生成过程。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;例子&lt;/strong&gt;：一个深度卷积网络可以准确识别图片中的猫和狗，但它不知道“猫为什么长这样”，也不知道如果改变光照或背景，识别结果是否会变。&lt;/p&gt;</description></item><item><title>《Deep Learning》Summary</title><link>https://qinggo.github.io/notes/deep-learning-goodfellow/</link><pubDate>Mon, 16 Mar 2026 10:51:34 +0800</pubDate><guid>https://qinggo.github.io/notes/deep-learning-goodfellow/</guid><description>&lt;p&gt;&lt;img alt="《Deep Learning》思维导图" loading="lazy" src="https://qinggo.github.io/images/deep-learning-goodfellow-mindmap.png"&gt;&lt;/p&gt;
 &lt;h1 id="深度学习ian-goodfellow-著第1章引言详细讲解"&gt;《深度学习》（Ian Goodfellow 著）第1章“引言”详细讲解&lt;/h1&gt;
 &lt;h2 id="1-本章概述与定位"&gt;1. 本章概述与定位&lt;/h2&gt;
 &lt;p&gt;第1章“引言”是全书的开篇，旨在为读者建立对“深度学习”这一领域的宏观认知。它不是一本技术手册的简单开场白，而是一幅精心绘制的“知识地图”。本章通过回顾人工智能的发展历程、定义核心概念、阐明深度学习的独特优势，为后续所有技术章节奠定了思想和理论基础。&lt;/p&gt;
