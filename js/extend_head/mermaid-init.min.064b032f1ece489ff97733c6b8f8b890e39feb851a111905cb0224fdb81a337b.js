@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){window.mermaid&&window.mermaid.initialize({startOnLoad:!0})})
