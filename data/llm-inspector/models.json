@@ -1,0 +1,1084 @@
+{
+  "defaultLocale": "zh",
+  "defaultModelId": "deepseek-v3",
+  "ui": {
+    "compareToggleOn": {
+      "zh": "显示对比",
+      "en": "Show Compare"
+    },
+    "compareToggleOff": {
+      "zh": "隐藏对比",
+      "en": "Hide Compare"
+    },
+    "summaryTitle": {
+      "zh": "当前模型参数",
+      "en": "Current Model Summary"
+    },
+    "provisionalBadge": {
+      "zh": "占位数据",
+      "en": "Provisional"
+    },
+    "localeLabel": {
+      "zh": "语言",
+      "en": "Language"
+    },
+    "modelLabel": {
+      "zh": "模型",
+      "en": "Model"
+    },
+    "compareTitle": {
+      "zh": "参数对比",
+      "en": "Parameter Comparison"
+    },
+    "detailsTitle": {
+      "zh": "模块说明",
+      "en": "Module Details"
+    },
+    "moduleSummaryLabel": {
+      "zh": "摘要",
+      "en": "Summary"
+    },
+    "moduleInModelLabel": {
+      "zh": "在当前模型中",
+      "en": "In This Model"
+    },
+    "moduleWhyLabel": {
+      "zh": "为什么重要",
+      "en": "Why It Matters"
+    },
+    "moduleComparedLabel": {
+      "zh": "与其它模型相比",
+      "en": "Compared"
+    },
+    "statsTitle": {
+      "zh": "相关统计",
+      "en": "Related Stats"
+    },
+    "referencesTitle": {
+      "zh": "参考资料",
+      "en": "References"
+    },
+    "notAvailable": {
+      "zh": "该模型不适用这个模块。",
+      "en": "This module is not applicable for the selected model."
+    },
+    "loadError": {
+      "zh": "数据加载失败，请检查静态 JSON 或刷新页面。",
+      "en": "Failed to load data. Check static JSON files and retry."
+    },
+    "provisionalNote": {
+      "zh": "当前页面中的部分数值来自公开资料整理或示意性占位值，建议后续使用本地脚本覆盖为实测结果。",
+      "en": "Some values are public-summary estimates or placeholders. Replace them with locally computed results later."
+    }
+  },
+  "compareFields": [
+    {
+      "id": "totalParams",
+      "label": {
+        "zh": "总参数量",
+        "en": "Total Params"
+      }
+    },
+    {
+      "id": "activeParams",
+      "label": {
+        "zh": "激活参数量",
+        "en": "Active Params"
+      }
+    },
+    {
+      "id": "attentionType",
+      "label": {
+        "zh": "Attention",
+        "en": "Attention"
+      }
+    },
+    {
+      "id": "contextLength",
+      "label": {
+        "zh": "上下文长度",
+        "en": "Context"
+      }
+    },
+    {
+      "id": "vocabSize",
+      "label": {
+        "zh": "词表大小",
+        "en": "Vocab"
+      }
+    },
+    {
+      "id": "experts",
+      "label": {
+        "zh": "专家数",
+        "en": "Experts"
+      }
+    },
+    {
+      "id": "topK",
+      "label": {
+        "zh": "Top-K",
+        "en": "Top-K"
+      }
+    },
+    {
+      "id": "sharedExperts",
+      "label": {
+        "zh": "共享专家",
+        "en": "Shared Experts"
+      }
+    }
+  ],
+  "models": [
+    {
+      "id": "deepseek-v3",
+      "name": {
+        "zh": "DeepSeek-V3",
+        "en": "DeepSeek-V3"
+      },
+      "badge": {
+        "zh": "稀疏 MoE",
+        "en": "Sparse MoE"
+      },
+      "summary": {
+        "zh": "以 MLA、DeepSeekMoE 与共享专家为主线，强调训练/推理成本效率。",
+        "en": "Built around MLA, DeepSeekMoE, and shared experts for cost-efficient scaling."
+      },
+      "svgPath": "/data/llm-inspector/architecture/deepseek-v3.svg",
+      "statsPath": "/data/llm-inspector/stats/deepseek-v3.json",
+      "provisional": true,
+      "overviewCards": [
+        {
+          "label": {
+            "zh": "结构主轴",
+            "en": "Architecture"
+          },
+          "value": {
+            "zh": "MLA + MoE + Shared Experts",
+            "en": "MLA + MoE + Shared Experts"
+          }
+        },
+        {
+          "label": {
+            "zh": "部署感受",
+            "en": "Serving Feel"
+          },
+          "value": {
+            "zh": "激活参数受控，KV 缓存更省",
+            "en": "Controlled active params with leaner KV cache"
+          }
+        },
+        {
+          "label": {
+            "zh": "说明",
+            "en": "Note"
+          },
+          "value": {
+            "zh": "首版为公开资料占位值",
+            "en": "Initial release uses public-source placeholders"
+          }
+        }
+      ],
+      "compareValues": {
+        "totalParams": "671B",
+        "activeParams": "37B",
+        "attentionType": "MLA",
+        "contextLength": "128K",
+        "vocabSize": "129K",
+        "experts": "256",
+        "topK": "8",
+        "sharedExperts": "1"
+      },
+      "defaultModule": "attention",
+      "modules": {
+        "tokens": {
+          "label": {
+            "zh": "输入与词表",
+            "en": "Tokens & Vocab"
+          },
+          "summary": {
+            "zh": "统一的 token 入口，词表规模与多语覆盖会影响 embedding 统计。",
+            "en": "The token entry point; vocabulary size influences embedding statistics."
+          },
+          "inModel": {
+            "zh": "DeepSeek-V3 使用大词表并服务于多语与代码场景，后续可结合词频和 token 类别做分析。",
+            "en": "DeepSeek-V3 uses a large vocabulary for multilingual and code-heavy usage."
+          },
+          "why": {
+            "zh": "词表规模会影响 embedding 参数量、投影分布和 lm_head 的结构。",
+            "en": "Vocabulary size shapes embedding volume, projections, and lm_head structure."
+          },
+          "compared": {
+            "zh": "相比 Qwen3 和 Kimi-K2，DeepSeek-V3 的重点不在词表本身，而在后续 MoE 与 attention 的配合。",
+            "en": "Relative to Qwen3 and Kimi-K2, the main differentiator is not vocab but the downstream MoE and attention design."
+          },
+          "stats": [
+            "token-overview"
+          ],
+          "references": [
+            {
+              "label": "DeepSeek-V3 Technical Report",
+              "url": "https://huggingface.co/papers/2412.19437"
+            }
+          ]
+        },
+        "embedding": {
+          "label": {
+            "zh": "Embedding",
+            "en": "Embedding"
+          },
+          "summary": {
+            "zh": "输入 embedding 与输出空间之间的关系，是最适合做静态普查的入口之一。",
+            "en": "The input embedding space is one of the best starting points for static parameter inspection."
+          },
+          "inModel": {
+            "zh": "首版页面默认展示 embedding 与 lm_head 的相似度摘要，以及投影散点的占位图。",
+            "en": "The initial page shows placeholder embedding-vs-lm_head similarity and projection charts."
+          },
+          "why": {
+            "zh": "它能快速反映词表参数的几何结构，也适合做低内存抽样分析。",
+            "en": "It offers a low-memory path to inspect token geometry and output alignment."
+          },
+          "compared": {
+            "zh": "三者都适合先从 embedding 入手，但 DeepSeek-V3 更值得和 shared experts 的统计一起看。",
+            "en": "All three benefit from embedding-first analysis, but DeepSeek-V3 is especially interesting when paired with shared-expert stats."
+          },
+          "stats": [
+            "embedding-summary",
+            "embedding-heatmap",
+            "embedding-projection"
+          ],
+          "references": [
+            {
+              "label": "DeepSeek-V3 Technical Report",
+              "url": "https://huggingface.co/papers/2412.19437"
+            }
+          ]
+        },
+        "attention": {
+          "label": {
+            "zh": "Attention",
+            "en": "Attention"
+          },
+          "summary": {
+            "zh": "DeepSeek-V3 的 attention 重点在 MLA，用更紧凑的 latent 表示控制 KV cache 成本。",
+            "en": "DeepSeek-V3 focuses on MLA, using compressed latent representations to reduce KV-cache cost."
+          },
+          "inModel": {
+            "zh": "页面中的 attention 模块代表 decoder stack 内的上下文聚合路径，而不是逐层的真实计算图。",
+            "en": "The page abstracts the context-aggregation path rather than rendering the exact per-layer computation graph."
+          },
+          "why": {
+            "zh": "如果你的关注点是推理效率、显存与吞吐，attention 设计通常是第一观察位。",
+            "en": "If you care about inference efficiency, memory footprint, and throughput, attention design is the first place to inspect."
+          },
+          "compared": {
+            "zh": "和 Qwen3 的 GQA 风格相比，DeepSeek-V3 的 MLA 更强调压缩 KV 表征；和 Kimi-K2 相比，两者都偏向 MLA 路线，但工程取舍不同。",
+            "en": "Compared with Qwen3's GQA-like route, DeepSeek-V3 pushes harder on KV compression through MLA; Kimi-K2 also leans toward MLA but with different engineering choices."
+          },
+          "stats": [
+            "attention-note",
+            "attention-metrics"
+          ],
+          "references": [
+            {
+              "label": "DeepSeek-V3 Technical Report",
+              "url": "https://huggingface.co/papers/2412.19437"
+            }
+          ]
+        },
+        "ffn_or_moe": {
+          "label": {
+            "zh": "FFN / MoE",
+            "en": "FFN / MoE"
+          },
+          "summary": {
+            "zh": "DeepSeek-V3 的主体是稀疏激活的专家网络，配合 shared experts 共同构成主要参数体量。",
+            "en": "DeepSeek-V3 relies on sparsely activated experts, with shared experts contributing to the main parameter budget."
+          },
+          "inModel": {
+            "zh": "页面将 routed experts 与 shared experts 分开描述，便于把专家间相似度和共享专家统计拆开观察。",
+            "en": "The page separates routed experts and shared experts to make expert-similarity and shared-expert stats easier to read."
+          },
+          "why": {
+            "zh": "这是解释 active params 与 total params 差异的关键。",
+            "en": "This is the key to understanding the gap between active and total parameters."
+          },
+          "compared": {
+            "zh": "相较 Qwen3，DeepSeek-V3 更强调 shared experts 的设计表达；和 Kimi-K2 相比，专家规模更克制。",
+            "en": "Compared with Qwen3, DeepSeek-V3 places more emphasis on shared-expert design; compared with Kimi-K2, its expert scale is more restrained."
+          },
+          "stats": [
+            "experts-cosine",
+            "experts-cka"
+          ],
+          "references": [
+            {
+              "label": "DeepSeek-V3 Technical Report",
+              "url": "https://huggingface.co/papers/2412.19437"
+            }
+          ]
+        },
+        "router": {
+          "label": {
+            "zh": "Router",
+            "en": "Router"
+          },
+          "summary": {
+            "zh": "Router 决定 token 进入哪些专家，是 sparse activation 的入口。",
+            "en": "The router selects experts for each token and gates sparse activation."
+          },
+          "inModel": {
+            "zh": "首版只展示结构说明，不做 activation 级 router 分析。",
+            "en": "The first version focuses on structural explanation rather than activation-level router analysis."
+          },
+          "why": {
+            "zh": "如果后续加入样本级分析，router 会成为最重要的扩展入口。",
+            "en": "If sample-level analysis is added later, the router becomes the most important extension point."
+          },
+          "compared": {
+            "zh": "三者都可以纳入同一抽象模块，但细节统计应留到后续迭代。",
+            "en": "All three can share the same abstraction, but detailed router stats belong to later iterations."
+          },
+          "stats": [
+            "router-note"
+          ],
+          "references": [
+            {
+              "label": "DeepSeek-V3 Technical Report",
+              "url": "https://huggingface.co/papers/2412.19437"
+            }
+          ]
+        },
+        "shared_experts": {
+          "label": {
+            "zh": "共享专家",
+            "en": "Shared Experts"
+          },
+          "summary": {
+            "zh": "共享专家是 DeepSeek-V3 很值得单独强调的一层抽象。",
+            "en": "Shared experts are important enough in DeepSeek-V3 to deserve their own abstraction."
+          },
+          "inModel": {
+            "zh": "页面默认把 shared experts 作为独立模块，方便和普通 experts 的统计分开对照。",
+            "en": "The page treats shared experts as a separate module to compare them against regular experts."
+          },
+          "why": {
+            "zh": "这能帮助理解模型为什么既保持稀疏激活，又保留一定的共享能力。",
+            "en": "It helps explain how the model preserves sparse activation while still maintaining shared capacity."
+          },
+          "compared": {
+            "zh": "Qwen3 侧重点不同；Kimi-K2 也可映射到类似概念，但需要后续用真实权重验证相似度结构。",
+            "en": "Qwen3 places less emphasis here; Kimi-K2 can be mapped to a similar concept but should be validated with real weights later."
+          },
+          "stats": [
+            "shared-expert-note",
+            "shared-expert-metrics"
+          ],
+          "references": [
+            {
+              "label": "DeepSeek-V3 Technical Report",
+              "url": "https://huggingface.co/papers/2412.19437"
+            }
+          ]
+        },
+        "decoder_stack": {
+          "label": {
+            "zh": "Decoder Stack",
+            "en": "Decoder Stack"
+          },
+          "summary": {
+            "zh": "这是整张图的骨架层，强调层级重复与模块组合，而不是还原每一层细节。",
+            "en": "This is the skeletal layer of the diagram, emphasizing repeated blocks over exact per-layer details."
+          },
+          "inModel": {
+            "zh": "首版以模块聚合方式表达 decoder stack，后续可扩展为二级结构。",
+            "en": "The initial version aggregates the decoder stack at the module level, leaving room for second-level details later."
+          },
+          "why": {
+            "zh": "它帮助用户把 attention 与 MoE 放回整体结构中理解。",
+            "en": "It helps users understand attention and MoE inside the overall structure."
+          },
+          "compared": {
+            "zh": "三者都共享 decoder-only 的大框架，但 stack 内部模块的风格差异明显。",
+            "en": "All three share the broader decoder-only frame, but the internal block styles differ."
+          },
+          "stats": [
+            "stack-note"
+          ],
+          "references": [
+            {
+              "label": "DeepSeek-V3 Technical Report",
+              "url": "https://huggingface.co/papers/2412.19437"
+            }
+          ]
+        },
+        "lm_head": {
+          "label": {
+            "zh": "LM Head",
+            "en": "LM Head"
+          },
+          "summary": {
+            "zh": "LM head 是与 embedding 最容易配对分析的输出模块。",
+            "en": "The LM head is the most natural output module to pair with embedding analysis."
+          },
+          "inModel": {
+            "zh": "首版用它与 embedding 的相似度摘要来代表输出空间结构。",
+            "en": "The first version uses embedding-vs-lm_head similarity as the proxy for output-space structure."
+          },
+          "why": {
+            "zh": "它适合低内存抽样，能快速生成一组稳定的静态统计。",
+            "en": "It works well with low-memory sampling and can quickly yield stable static statistics."
+          },
+          "compared": {
+            "zh": "DeepSeek-V3 的重点仍在与 experts 联合观察，而不是单看 lm_head。",
+            "en": "The more interesting read for DeepSeek-V3 is to view the LM head alongside expert statistics."
+          },
+          "stats": [
+            "embedding-summary",
+            "embedding-heatmap"
+          ],
+          "references": [
+            {
+              "label": "DeepSeek-V3 Technical Report",
+              "url": "https://huggingface.co/papers/2412.19437"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "qwen3-235b-a22b",
+      "name": {
+        "zh": "Qwen3-235B-A22B",
+        "en": "Qwen3-235B-A22B"
+      },
+      "badge": {
+        "zh": "混合推理/通用模式",
+        "en": "Thinking / Non-thinking"
+      },
+      "summary": {
+        "zh": "以通用能力、推理模式切换和大规模 MoE 为主线，页面中更强调它作为对照组的清晰性。",
+        "en": "Built around broad capability, mode switching, and large-scale MoE; this page presents it as a clean comparison target."
+      },
+      "svgPath": "/data/llm-inspector/architecture/qwen3-235b-a22b.svg",
+      "statsPath": "/data/llm-inspector/stats/qwen3-235b-a22b.json",
+      "provisional": true,
+      "overviewCards": [
+        {
+          "label": {
+            "zh": "结构主轴",
+            "en": "Architecture"
+          },
+          "value": {
+            "zh": "GQA 风格 Attention + 大规模 MoE",
+            "en": "GQA-style Attention + large-scale MoE"
+          }
+        },
+        {
+          "label": {
+            "zh": "产品风格",
+            "en": "Product Flavor"
+          },
+          "value": {
+            "zh": "推理模式与通用模式切换",
+            "en": "Switchable reasoning and general modes"
+          }
+        },
+        {
+          "label": {
+            "zh": "说明",
+            "en": "Note"
+          },
+          "value": {
+            "zh": "部分结构字段待后续实测补齐",
+            "en": "Some structural fields should be verified later"
+          }
+        }
+      ],
+      "compareValues": {
+        "totalParams": "235B",
+        "activeParams": "22B",
+        "attentionType": "GQA",
+        "contextLength": "128K",
+        "vocabSize": "152K",
+        "experts": "128",
+        "topK": "8",
+        "sharedExperts": "0"
+      },
+      "defaultModule": "decoder_stack",
+      "modules": {
+        "tokens": {
+          "label": {
+            "zh": "输入与词表",
+            "en": "Tokens & Vocab"
+          },
+          "summary": {
+            "zh": "Qwen3 的词表规模和多语言覆盖使它适合作为 embedding 对照组。",
+            "en": "Qwen3's large multilingual vocabulary makes it a strong embedding baseline."
+          },
+          "inModel": {
+            "zh": "首版以词表规模和多语覆盖为主，不展开 tokenizer 细节。",
+            "en": "The first version focuses on vocabulary size and coverage instead of tokenizer internals."
+          },
+          "why": {
+            "zh": "在多模型比较里，它能帮助解释 embedding 分布的差异。",
+            "en": "In cross-model comparison, it helps explain embedding-distribution differences."
+          },
+          "compared": {
+            "zh": "相比 DeepSeek-V3 与 Kimi-K2，Qwen3 更适合作为通用多语基线。",
+            "en": "Compared with DeepSeek-V3 and Kimi-K2, Qwen3 serves as a cleaner multilingual baseline."
+          },
+          "stats": [
+            "token-overview"
+          ],
+          "references": [
+            {
+              "label": "Qwen3-235B-A22B Model Card",
+              "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-FP8"
+            }
+          ]
+        },
+        "embedding": {
+          "label": {
+            "zh": "Embedding",
+            "en": "Embedding"
+          },
+          "summary": {
+            "zh": "Qwen3 的 embedding 更适合作为稳定对照组，观察多语与代码 token 的几何分布。",
+            "en": "Qwen3's embedding works well as a stable baseline for multilingual and code-token geometry."
+          },
+          "inModel": {
+            "zh": "首版中 embedding 部分与 DeepSeek-V3 使用同一套图形模板，便于肉眼对照。",
+            "en": "The first release reuses the same chart templates as DeepSeek-V3 for quick visual comparison."
+          },
+          "why": {
+            "zh": "它能帮助分离“词表/输出空间”与“MoE 结构”的影响。",
+            "en": "It helps separate vocabulary/output-space effects from MoE-structure effects."
+          },
+          "compared": {
+            "zh": "如果把 DeepSeek-V3 和 Qwen3 放在同一张参数表里，embedding 的比较通常是最先值得看的位置。",
+            "en": "If DeepSeek-V3 and Qwen3 are compared in one table, embedding is usually the first worthwhile module to inspect."
+          },
+          "stats": [
+            "embedding-summary",
+            "embedding-heatmap",
+            "embedding-projection"
+          ],
+          "references": [
+            {
+              "label": "Qwen3-235B-A22B Model Card",
+              "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-FP8"
+            }
+          ]
+        },
+        "attention": {
+          "label": {
+            "zh": "Attention",
+            "en": "Attention"
+          },
+          "summary": {
+            "zh": "Qwen3 在这个页面里主要作为 MLA 路线的对照组，展示更经典的 grouped-query 风格。",
+            "en": "On this page, Qwen3 acts as a comparison point to MLA-heavy models with a more conventional grouped-query style."
+          },
+          "inModel": {
+            "zh": "页面不追求还原全部 attention 实现细节，而是突出和 DeepSeek/Kimi 的差异。",
+            "en": "The page does not aim to reconstruct every attention detail, only the differences versus DeepSeek/Kimi."
+          },
+          "why": {
+            "zh": "作为对照组，它有助于理解为什么另外两家会更强调 MLA 或 cache 压缩。",
+            "en": "As a comparison target, it helps explain why the other two emphasize MLA or KV-cache compression."
+          },
+          "compared": {
+            "zh": "相较 DeepSeek-V3 和 Kimi-K2 的 MLA 路线，Qwen3 的 attention 叙事更直接也更容易读懂。",
+            "en": "Relative to the MLA-oriented designs of DeepSeek-V3 and Kimi-K2, Qwen3's attention story is more straightforward."
+          },
+          "stats": [
+            "attention-note",
+            "attention-metrics"
+          ],
+          "references": [
+            {
+              "label": "Qwen3 Technical Report",
+              "url": "https://huggingface.co/papers/2505.09388"
+            }
+          ]
+        },
+        "ffn_or_moe": {
+          "label": {
+            "zh": "FFN / MoE",
+            "en": "FFN / MoE"
+          },
+          "summary": {
+            "zh": "Qwen3-235B-A22B 也是 MoE 模型，但页面中更强调它与其它两者的规模对照。",
+            "en": "Qwen3-235B-A22B is also an MoE model, but the page emphasizes its scale relative to the other two."
+          },
+          "inModel": {
+            "zh": "首版专家统计为示意性占位数据，主要用于验证页面结构和图表容器。",
+            "en": "Initial expert statistics are illustrative placeholders used to validate page structure and chart containers."
+          },
+          "why": {
+            "zh": "对 MoE 模型来说，专家相似度矩阵是后续最值得实测替换的部分之一。",
+            "en": "For MoE models, expert-similarity matrices are among the most important charts to replace with real measurements."
+          },
+          "compared": {
+            "zh": "Qwen3 在这里更像中间态：不像 DeepSeek-V3 那么强调 shared experts，也不像 Kimi-K2 那么激进地堆高总参数。",
+            "en": "Qwen3 sits in the middle: less emphasis on shared experts than DeepSeek-V3 and less aggressive total scale than Kimi-K2."
+          },
+          "stats": [
+            "experts-cosine",
+            "experts-cka"
+          ],
+          "references": [
+            {
+              "label": "Qwen3-235B-A22B Model Card",
+              "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-FP8"
+            }
+          ]
+        },
+        "router": {
+          "label": {
+            "zh": "Router",
+            "en": "Router"
+          },
+          "summary": {
+            "zh": "Router 在 MVP 里只做结构位说明，不承载样本级路由分析。",
+            "en": "In the MVP, the router is explained structurally without sample-level routing analysis."
+          },
+          "inModel": {
+            "zh": "如果后续要做真实路由分布，这里会成为最自然的扩展入口。",
+            "en": "If true routing distributions are added later, this becomes the natural extension point."
+          },
+          "why": {
+            "zh": "把 router 单独抽象出来，有助于后续扩展而不改动主图结构。",
+            "en": "Keeping the router separate preserves extensibility without changing the core diagram."
+          },
+          "compared": {
+            "zh": "三者都共享这个抽象模块，但 MVP 只做解释，不做实测图。",
+            "en": "All three share this abstract module, but the MVP only explains it without measured charts."
+          },
+          "stats": [
+            "router-note"
+          ],
+          "references": [
+            {
+              "label": "Qwen3 Technical Report",
+              "url": "https://huggingface.co/papers/2505.09388"
+            }
+          ]
+        },
+        "shared_experts": {
+          "label": {
+            "zh": "共享专家",
+            "en": "Shared Experts"
+          },
+          "summary": {
+            "zh": "Qwen3 在这个抽象位上的强调较弱，因此当前更像占位说明块。",
+            "en": "Qwen3 puts less emphasis on this abstraction, so this currently behaves more like a placeholder note block."
+          },
+          "inModel": {
+            "zh": "这里主要用于保持三模型模块布局一致，减少切换成本。",
+            "en": "It mainly exists to keep the three-model module layout aligned."
+          },
+          "why": {
+            "zh": "即便某模型不突出 shared experts，这个位置也有利于后续扩展兼容。",
+            "en": "Even if a model does not emphasize shared experts, this slot helps preserve future compatibility."
+          },
+          "compared": {
+            "zh": "相较 DeepSeek-V3，这里更适合作为对照位，而不是重点解释位。",
+            "en": "Compared with DeepSeek-V3, this is better treated as a comparison slot than as a focal explanation."
+          },
+          "stats": [
+            "shared-expert-note"
+          ],
+          "references": [
+            {
+              "label": "Qwen3-235B-A22B Model Card",
+              "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-FP8"
+            }
+          ]
+        },
+        "decoder_stack": {
+          "label": {
+            "zh": "Decoder Stack",
+            "en": "Decoder Stack"
+          },
+          "summary": {
+            "zh": "Qwen3 更适合作为一个干净的 decoder stack 对照模板。",
+            "en": "Qwen3 works well as a clean decoder-stack comparison template."
+          },
+          "inModel": {
+            "zh": "首版默认选中这个模块，是因为它能让读者更快建立整体结构印象。",
+            "en": "This is the default selected module in the first release because it helps readers build a quick global picture."
+          },
+          "why": {
+            "zh": "对博客型页面来说，先讲清整体结构，再深入某个模块更符合阅读路径。",
+            "en": "For a blog-style page, clarifying the overall stack before diving deep better matches the reading flow."
+          },
+          "compared": {
+            "zh": "它在三者中最适合作为中性对照，不会让视觉重点一开始就被 shared experts 抢走。",
+            "en": "Among the three, it is the most neutral comparison baseline and avoids letting shared experts dominate the visual story immediately."
+          },
+          "stats": [
+            "stack-note"
+          ],
+          "references": [
+            {
+              "label": "Qwen3 Technical Report",
+              "url": "https://huggingface.co/papers/2505.09388"
+            }
+          ]
+        },
+        "lm_head": {
+          "label": {
+            "zh": "LM Head",
+            "en": "LM Head"
+          },
+          "summary": {
+            "zh": "Qwen3 的 lm_head 主要用于与 embedding 构成一组稳定的默认统计。",
+            "en": "Qwen3's LM head is mainly used to form a stable default stat pair with embedding."
+          },
+          "inModel": {
+            "zh": "首版只展示和 embedding 的关系，不在这里展开更细的谱分析。",
+            "en": "The first release only shows its relation to embedding and does not expand into deeper spectral analysis."
+          },
+          "why": {
+            "zh": "它是最容易先做出低内存脚本的一部分。",
+            "en": "It is one of the easiest modules to support with low-memory scripts early on."
+          },
+          "compared": {
+            "zh": "作为对照组，Qwen3 更适合先提供一组稳定统计，再逐步扩展细节。",
+            "en": "As a comparison baseline, Qwen3 is well suited for a stable first-pass stat set."
+          },
+          "stats": [
+            "embedding-summary",
+            "embedding-heatmap"
+          ],
+          "references": [
+            {
+              "label": "Qwen3-235B-A22B Model Card",
+              "url": "https://huggingface.co/Qwen/Qwen3-235B-A22B-FP8"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "kimi-k2",
+      "name": {
+        "zh": "Kimi-K2",
+        "en": "Kimi-K2"
+      },
+      "badge": {
+        "zh": "超大规模 MoE",
+        "en": "Very Large MoE"
+      },
+      "summary": {
+        "zh": "用更激进的参数规模和 MLA 路线构成第三个对照点，适合放在页面里看规模化差异。",
+        "en": "A third comparison point with more aggressive total scale and an MLA-oriented design."
+      },
+      "svgPath": "/data/llm-inspector/architecture/kimi-k2.svg",
+      "statsPath": "/data/llm-inspector/stats/kimi-k2.json",
+      "provisional": true,
+      "overviewCards": [
+        {
+          "label": {
+            "zh": "结构主轴",
+            "en": "Architecture"
+          },
+          "value": {
+            "zh": "MLA + 超大专家池",
+            "en": "MLA + very large expert pool"
+          }
+        },
+        {
+          "label": {
+            "zh": "尺度感",
+            "en": "Scale"
+          },
+          "value": {
+            "zh": "总参数量拉高，但激活参数仍受控",
+            "en": "Larger total scale with controlled active parameters"
+          }
+        },
+        {
+          "label": {
+            "zh": "说明",
+            "en": "Note"
+          },
+          "value": {
+            "zh": "架构图为便于比较的抽象版",
+            "en": "Architecture diagram is a comparison-oriented abstraction"
+          }
+        }
+      ],
+      "compareValues": {
+        "totalParams": "1T",
+        "activeParams": "32B",
+        "attentionType": "MLA",
+        "contextLength": "128K",
+        "vocabSize": "160K",
+        "experts": "384",
+        "topK": "8",
+        "sharedExperts": "1"
+      },
+      "defaultModule": "ffn_or_moe",
+      "modules": {
+        "tokens": {
+          "label": {
+            "zh": "输入与词表",
+            "en": "Tokens & Vocab"
+          },
+          "summary": {
+            "zh": "Kimi-K2 的词表规模更大，适合后续做 embedding 空间的宽覆盖观察。",
+            "en": "Kimi-K2's larger vocabulary makes it interesting for broader embedding-space coverage."
+          },
+          "inModel": {
+            "zh": "首版仍然只做词表级摘要，不展开 tokenizer 内部机制。",
+            "en": "The first version keeps this at a vocabulary-summary level instead of tokenizer internals."
+          },
+          "why": {
+            "zh": "如果后续加入跨模型 token 对齐，Kimi-K2 会是很有意思的对照点。",
+            "en": "If cross-model token alignment is added later, Kimi-K2 will be a useful comparison point."
+          },
+          "compared": {
+            "zh": "它在词表规模上比 DeepSeek-V3 更激进，也比 Qwen3 更适合观察大词表对空间分布的影响。",
+            "en": "Its vocabulary is more aggressive than DeepSeek-V3 and offers a different large-vocab perspective from Qwen3."
+          },
+          "stats": [
+            "token-overview"
+          ],
+          "references": [
+            {
+              "label": "Kimi-K2 Model Card",
+              "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+            }
+          ]
+        },
+        "embedding": {
+          "label": {
+            "zh": "Embedding",
+            "en": "Embedding"
+          },
+          "summary": {
+            "zh": "Kimi-K2 的 embedding 统计适合作为“大词表 + 超大 MoE”背景下的输出空间观察入口。",
+            "en": "Kimi-K2 embedding stats are useful for viewing output-space geometry under a large-vocab, large-MoE regime."
+          },
+          "inModel": {
+            "zh": "首版投影散点仍为示意性数据，但预留了和真实脚本产出对齐的结构。",
+            "en": "The first release uses illustrative projection points but keeps a schema aligned with future real-script outputs."
+          },
+          "why": {
+            "zh": "embedding 是最容易和 lm_head、词表规模一起读的模块。",
+            "en": "Embedding is the easiest module to read jointly with lm_head and vocabulary scale."
+          },
+          "compared": {
+            "zh": "相比 DeepSeek-V3，Kimi-K2 更强调超大专家池带来的整体尺度感；embedding 则提供了一个相对稳定的切入口。",
+            "en": "Compared with DeepSeek-V3, Kimi-K2 emphasizes the overall feel of a much larger expert pool; embedding offers a steadier entry point."
+          },
+          "stats": [
+            "embedding-summary",
+            "embedding-heatmap",
+            "embedding-projection"
+          ],
+          "references": [
+            {
+              "label": "Kimi-K2 Model Card",
+              "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+            }
+          ]
+        },
+        "attention": {
+          "label": {
+            "zh": "Attention",
+            "en": "Attention"
+          },
+          "summary": {
+            "zh": "Kimi-K2 也沿着 MLA 路线展开，因此适合和 DeepSeek-V3 放在同一视角比较。",
+            "en": "Kimi-K2 also follows an MLA-oriented route, making it natural to compare with DeepSeek-V3."
+          },
+          "inModel": {
+            "zh": "页面里的 attention 区块用于解释 cache 与吞吐角度的取舍，而不是还原全部细节。",
+            "en": "The attention block explains tradeoffs from the cache-and-throughput perspective rather than reproducing all details."
+          },
+          "why": {
+            "zh": "如果用户关心推理效率，这里通常是进入对比阅读的第一站。",
+            "en": "If the reader cares about inference efficiency, this is usually the first stop."
+          },
+          "compared": {
+            "zh": "和 DeepSeek-V3 同样偏 MLA，但在页面叙事里，Kimi-K2 更适合作为“大规模实现”的对照样本。",
+            "en": "Like DeepSeek-V3, it leans toward MLA, but in page narrative Kimi-K2 serves as the large-scale implementation reference."
+          },
+          "stats": [
+            "attention-note",
+            "attention-metrics"
+          ],
+          "references": [
+            {
+              "label": "Kimi-K2 Model Card",
+              "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+            }
+          ]
+        },
+        "ffn_or_moe": {
+          "label": {
+            "zh": "FFN / MoE",
+            "en": "FFN / MoE"
+          },
+          "summary": {
+            "zh": "Kimi-K2 在这张页面里最值得看的就是超大专家池和 active params 的组合。",
+            "en": "Kimi-K2 is most interesting here for its very large expert pool combined with controlled active parameters."
+          },
+          "inModel": {
+            "zh": "首版把专家矩阵统计放在这里，方便直接看到“规模更大时相似度结构会如何变化”的占位结果。",
+            "en": "The first version places expert-matrix stats here so readers can directly inspect placeholder patterns at larger scale."
+          },
+          "why": {
+            "zh": "这是页面中最能体现 Kimi-K2 风格的模块。",
+            "en": "This is the module that best captures Kimi-K2's character."
+          },
+          "compared": {
+            "zh": "相较 DeepSeek-V3 和 Qwen3，Kimi-K2 更适合作为“总参数量继续上探”时的参考点。",
+            "en": "Compared with DeepSeek-V3 and Qwen3, Kimi-K2 is the clearest reference point for what happens when total scale increases further."
+          },
+          "stats": [
+            "experts-cosine",
+            "experts-cka"
+          ],
+          "references": [
+            {
+              "label": "Kimi-K2 Model Card",
+              "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+            }
+          ]
+        },
+        "router": {
+          "label": {
+            "zh": "Router",
+            "en": "Router"
+          },
+          "summary": {
+            "zh": "Router 仍然只做结构位说明，后续可以作为样本级稀疏激活分析的入口。",
+            "en": "The router remains a structural explanation slot for now and can later host sample-level sparse-activation analysis."
+          },
+          "inModel": {
+            "zh": "在超大专家池背景下，这个位置尤其值得后续扩展。",
+            "en": "With such a large expert pool, this slot is especially worth expanding later."
+          },
+          "why": {
+            "zh": "如果后续需要解释专家利用率，这里会成为最关键的桥梁模块。",
+            "en": "If expert utilization needs to be explained later, this becomes the key bridge module."
+          },
+          "compared": {
+            "zh": "MVP 里仍然只做说明，不上复杂统计。",
+            "en": "In the MVP, this remains explanatory only without complex stats."
+          },
+          "stats": [
+            "router-note"
+          ],
+          "references": [
+            {
+              "label": "Kimi-K2 Model Card",
+              "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+            }
+          ]
+        },
+        "shared_experts": {
+          "label": {
+            "zh": "共享专家",
+            "en": "Shared Experts"
+          },
+          "summary": {
+            "zh": "共享专家模块保留在主图里，便于和 DeepSeek-V3 对照。",
+            "en": "The shared-expert module remains in the main diagram to support comparison with DeepSeek-V3."
+          },
+          "inModel": {
+            "zh": "首版只展示摘要统计，不在这里展开更细粒度的矩阵分析。",
+            "en": "The first version shows summary stats only and does not expand into finer matrix analysis here."
+          },
+          "why": {
+            "zh": "它提供了一个观察“共享能力”是否随规模变化而变化的入口。",
+            "en": "It offers a path to inspect whether shared capacity changes with model scale."
+          },
+          "compared": {
+            "zh": "和 DeepSeek-V3 一样，这里值得保留为一级模块；和 Qwen3 相比则更多是扩展位。",
+            "en": "Like DeepSeek-V3, it is worth keeping as a first-level module; compared with Qwen3 it is more of an extension slot."
+          },
+          "stats": [
+            "shared-expert-note",
+            "shared-expert-metrics"
+          ],
+          "references": [
+            {
+              "label": "Kimi-K2 Model Card",
+              "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+            }
+          ]
+        },
+        "decoder_stack": {
+          "label": {
+            "zh": "Decoder Stack",
+            "en": "Decoder Stack"
+          },
+          "summary": {
+            "zh": "Decoder stack 在 Kimi-K2 上更像“把 MLA 和超大 MoE 串起来的容器”。",
+            "en": "In Kimi-K2, the decoder stack acts more like the container binding MLA and a very large MoE together."
+          },
+          "inModel": {
+            "zh": "图中仍然使用统一抽象，避免因为规模过大导致视觉过载。",
+            "en": "The diagram still uses the same abstraction to avoid visual overload at larger scale."
+          },
+          "why": {
+            "zh": "这有助于在不增加页面复杂度的前提下保持可比较性。",
+            "en": "This keeps models comparable without increasing page complexity."
+          },
+          "compared": {
+            "zh": "Kimi-K2 更强调整体尺度，但在页面里仍沿用和另外两者一致的主图语法。",
+            "en": "Kimi-K2 emphasizes overall scale, but the page preserves the same visual grammar as the other two."
+          },
+          "stats": [
+            "stack-note"
+          ],
+          "references": [
+            {
+              "label": "Kimi-K2 Model Card",
+              "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+            }
+          ]
+        },
+        "lm_head": {
+          "label": {
+            "zh": "LM Head",
+            "en": "LM Head"
+          },
+          "summary": {
+            "zh": "LM head 与 embedding 的配对统计仍然是最容易跨模型对齐的一组默认结果。",
+            "en": "LM head paired with embedding remains the easiest default stat set to align across models."
+          },
+          "inModel": {
+            "zh": "首版中把它作为轻量结果区的一部分，而不是主叙事模块。",
+            "en": "In the first release, it lives more as a lightweight result block than as the main narrative module."
+          },
+          "why": {
+            "zh": "它适合快速替换为真实数据，不会牵动页面结构。",
+            "en": "It is easy to replace with real data later without changing page structure."
+          },
+          "compared": {
+            "zh": "对于 Kimi-K2，这里更像一个稳态对照位，用来平衡 MoE 模块带来的巨大信息量。",
+            "en": "For Kimi-K2, this acts as a stable comparison slot that balances the large amount of information in the MoE module."
+          },
+          "stats": [
+            "embedding-summary",
+            "embedding-heatmap"
+          ],
+          "references": [
+            {
+              "label": "Kimi-K2 Model Card",
+              "url": "https://huggingface.co/moonshotai/Kimi-K2-Instruct"
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

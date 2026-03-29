@@ -1,0 +1,74 @@
+<svg width="960" height="560" viewBox="0 0 960 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .node { cursor: pointer; transition: opacity 160ms ease; }
+    .label { font-family: 'IBM Plex Sans', 'PingFang SC', sans-serif; font-size: 16px; fill: #183437; }
+    .small { font-size: 12px; fill: #4f6667; }
+    .soft { fill: #f7f2e8; stroke: #cbb99a; }
+    .teal { fill: #dff0ec; stroke: #2b6f72; }
+    .blue { fill: #dfeaf7; stroke: #3e6b9c; }
+    .gold { fill: #f4ead3; stroke: #9c7a2f; }
+    .rose { fill: #f5e1de; stroke: #96564b; }
+    .slate { fill: #e8ecee; stroke: #60717a; }
+    .line { stroke: #7f8f92; stroke-width: 2.2; stroke-linecap: round; }
+  </style>
+  <rect x="20" y="20" width="920" height="520" rx="28" fill="#fbfaf7" stroke="#e2ddd1"/>
+  <text x="52" y="62" class="label" style="font-size: 26px; font-weight: 700;">DeepSeek-V3</text>
+  <text x="52" y="86" class="small">MLA + Sparse MoE + Shared Experts</text>
+
+  <g id="node_tokens" data-node-id="tokens" class="node">
+    <rect x="48" y="128" width="154" height="78" rx="18" class="soft" stroke-width="2"/>
+    <text x="70" y="160" class="label">输入 Tokens</text>
+    <text x="70" y="182" class="small">词表 / tokenizer</text>
+  </g>
+
+  <g id="node_embedding" data-node-id="embedding" class="node">
+    <rect x="240" y="128" width="170" height="78" rx="18" class="teal" stroke-width="2"/>
+    <text x="266" y="160" class="label">Embedding</text>
+    <text x="266" y="182" class="small">token space</text>
+  </g>
+
+  <g id="node_decoder_stack" data-node-id="decoder_stack" class="node">
+    <rect x="452" y="102" width="328" height="286" rx="28" class="slate" stroke-width="2"/>
+    <text x="480" y="136" class="label" style="font-size: 21px; font-weight: 700;">Decoder Stack</text>
+    <text x="480" y="158" class="small">重复层的抽象视图</text>
+  </g>
+
+  <g id="node_attention" data-node-id="attention" class="node">
+    <rect x="480" y="184" width="122" height="82" rx="18" class="blue" stroke-width="2"/>
+    <text x="503" y="218" class="label">Attention</text>
+    <text x="503" y="240" class="small">MLA</text>
+  </g>
+
+  <g id="node_router" data-node-id="router" class="node">
+    <rect x="624" y="184" width="124" height="58" rx="18" class="gold" stroke-width="2"/>
+    <text x="657" y="219" class="label">Router</text>
+  </g>
+
+  <g id="node_ffn_or_moe" data-node-id="ffn_or_moe" class="node">
+    <rect x="624" y="256" width="124" height="90" rx="18" class="gold" stroke-width="2"/>
+    <text x="650" y="292" class="label">Experts</text>
+    <text x="650" y="314" class="small">sparse top-k</text>
+  </g>
+
+  <g id="node_shared_experts" data-node-id="shared_experts" class="node">
+    <rect x="480" y="286" width="122" height="60" rx="18" class="rose" stroke-width="2"/>
+    <text x="500" y="321" class="label">Shared</text>
+    <text x="558" y="321" class="label">Expert</text>
+  </g>
+
+  <g id="node_lm_head" data-node-id="lm_head" class="node">
+    <rect x="804" y="128" width="112" height="78" rx="18" class="teal" stroke-width="2"/>
+    <text x="829" y="160" class="label">LM Head</text>
+    <text x="829" y="182" class="small">logits</text>
+  </g>
+
+  <line x1="202" y1="167" x2="240" y2="167" class="line"/>
+  <line x1="410" y1="167" x2="452" y2="167" class="line"/>
+  <line x1="780" y1="167" x2="804" y2="167" class="line"/>
+  <line x1="602" y1="226" x2="624" y2="213" class="line"/>
+  <line x1="602" y1="244" x2="624" y2="280" class="line"/>
+  <line x1="602" y1="316" x2="624" y2="301" class="line"/>
+
+  <text x="50" y="438" class="small">图中只保留一级模块，便于和 Qwen3 / Kimi-K2 做同构比较。</text>
+  <text x="50" y="460" class="small">点击模块后，右侧会展示说明和下方统计。</text>
+</svg>

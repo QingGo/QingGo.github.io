@@ -1,0 +1,190 @@
+{
+  "provisional": true,
+  "generatedAt": "2026-03-29",
+  "source": "public-summary-placeholders",
+  "moduleStats": {
+    "tokens": [
+      {
+        "id": "token-overview",
+        "kind": "note",
+        "title": {
+          "zh": "词表入口",
+          "en": "Vocabulary Entry"
+        },
+        "body": {
+          "zh": "Qwen3 可作为多语与代码 token 的稳定对照组。首版只保留入口说明。",
+          "en": "Qwen3 can serve as a stable multilingual/code-token baseline. The first version keeps only a lightweight entry note."
+        }
+      }
+    ],
+    "embedding": [
+      {
+        "id": "embedding-summary",
+        "kind": "metrics",
+        "title": {
+          "zh": "Embedding / LM Head 摘要",
+          "en": "Embedding / LM Head Summary"
+        },
+        "items": [
+          {"label": {"zh": "对角余弦均值", "en": "Mean Diagonal Cosine"}, "value": "0.89"},
+          {"label": {"zh": "对角余弦中位数", "en": "Median Diagonal Cosine"}, "value": "0.90"},
+          {"label": {"zh": "投影样本数", "en": "Projection Samples"}, "value": "240"}
+        ]
+      },
+      {
+        "id": "embedding-heatmap",
+        "kind": "heatmap",
+        "title": {
+          "zh": "Embedding / LM Head 相似度热图",
+          "en": "Embedding / LM Head Similarity Heatmap"
+        },
+        "rows": ["A0", "A1", "A2", "A3", "A4", "A5"],
+        "cols": ["B0", "B1", "B2", "B3", "B4", "B5"],
+        "values": [
+          [0.93, 0.35, 0.29, 0.24, 0.25, 0.23],
+          [0.34, 0.92, 0.31, 0.27, 0.28, 0.26],
+          [0.27, 0.32, 0.9, 0.29, 0.3, 0.28],
+          [0.24, 0.27, 0.28, 0.91, 0.32, 0.3],
+          [0.22, 0.26, 0.28, 0.33, 0.92, 0.35],
+          [0.21, 0.23, 0.26, 0.28, 0.34, 0.93]
+        ],
+        "note": {
+          "zh": "占位结果偏向更整齐的对角结构，用于体现它作为对照组时更稳定的感觉。",
+          "en": "This placeholder emphasizes a cleaner diagonal pattern to make Qwen3 feel like a steadier baseline."
+        }
+      },
+      {
+        "id": "embedding-projection",
+        "kind": "scatter",
+        "title": {
+          "zh": "Embedding 投影示意",
+          "en": "Embedding Projection Sketch"
+        },
+        "xLabel": "Dim 1",
+        "yLabel": "Dim 2",
+        "points": [
+          {"x": -2.0, "y": 1.6, "label": "zh", "group": "zh"},
+          {"x": -1.6, "y": 1.3, "label": "字", "group": "zh"},
+          {"x": -1.2, "y": 1.0, "label": "词", "group": "zh"},
+          {"x": 1.8, "y": 1.1, "label": "eng", "group": "en"},
+          {"x": 2.2, "y": 0.9, "label": "chat", "group": "en"},
+          {"x": 2.5, "y": 0.6, "label": "text", "group": "en"},
+          {"x": -1.8, "y": -1.4, "label": "code", "group": "code"},
+          {"x": -1.3, "y": -1.1, "label": "def", "group": "code"},
+          {"x": 0.2, "y": -1.9, "label": "math", "group": "symbol"},
+          {"x": 0.7, "y": -1.6, "label": "sym", "group": "symbol"},
+          {"x": 1.2, "y": -1.0, "label": "sys", "group": "meta"},
+          {"x": 1.5, "y": -0.8, "label": "ctl", "group": "meta"}
+        ]
+      }
+    ],
+    "attention": [
+      {
+        "id": "attention-note",
+        "kind": "note",
+        "title": {
+          "zh": "Attention 对照位",
+          "en": "Attention Baseline"
+        },
+        "body": {
+          "zh": "Qwen3 在这里主要作为 MLA 路线的对照位，因此首版只做轻量摘要。",
+          "en": "Qwen3 is mainly the comparison baseline to MLA-heavy designs here, so the first version keeps only lightweight summaries."
+        }
+      },
+      {
+        "id": "attention-metrics",
+        "kind": "metrics",
+        "title": {
+          "zh": "Attention 摘要",
+          "en": "Attention Summary"
+        },
+        "items": [
+          {"label": {"zh": "Attention 路线", "en": "Attention Route"}, "value": "GQA"},
+          {"label": {"zh": "上下文长度", "en": "Context"}, "value": "128K"},
+          {"label": {"zh": "角色", "en": "Role"}, "value": "baseline"}
+        ]
+      }
+    ],
+    "ffn_or_moe": [
+      {
+        "id": "experts-cosine",
+        "kind": "heatmap",
+        "title": {
+          "zh": "专家矩阵余弦相似度",
+          "en": "Expert Cosine Similarity"
+        },
+        "rows": ["E0", "E1", "E2", "E3", "E4", "E5"],
+        "cols": ["E0", "E1", "E2", "E3", "E4", "E5"],
+        "values": [
+          [1.0, 0.73, 0.61, 0.44, 0.37, 0.34],
+          [0.73, 1.0, 0.67, 0.46, 0.39, 0.35],
+          [0.61, 0.67, 1.0, 0.49, 0.42, 0.38],
+          [0.44, 0.46, 0.49, 1.0, 0.68, 0.6],
+          [0.37, 0.39, 0.42, 0.68, 1.0, 0.7],
+          [0.34, 0.35, 0.38, 0.6, 0.7, 1.0]
+        ]
+      },
+      {
+        "id": "experts-cka",
+        "kind": "heatmap",
+        "title": {
+          "zh": "专家矩阵 CKA",
+          "en": "Expert CKA"
+        },
+        "rows": ["E0", "E1", "E2", "E3", "E4", "E5"],
+        "cols": ["E0", "E1", "E2", "E3", "E4", "E5"],
+        "values": [
+          [1.0, 0.69, 0.55, 0.35, 0.28, 0.25],
+          [0.69, 1.0, 0.58, 0.37, 0.31, 0.28],
+          [0.55, 0.58, 1.0, 0.41, 0.35, 0.3],
+          [0.35, 0.37, 0.41, 1.0, 0.64, 0.59],
+          [0.28, 0.31, 0.35, 0.64, 1.0, 0.67],
+          [0.25, 0.28, 0.3, 0.59, 0.67, 1.0]
+        ]
+      }
+    ],
+    "router": [
+      {
+        "id": "router-note",
+        "kind": "note",
+        "title": {
+          "zh": "Router 入口",
+          "en": "Router Entry"
+        },
+        "body": {
+          "zh": "这里当前只保留结构位，后续可接入真实路由日志或 activation 统计。",
+          "en": "This currently remains a structural slot and can later host real routing logs or activation stats."
+        }
+      }
+    ],
+    "shared_experts": [
+      {
+        "id": "shared-expert-note",
+        "kind": "note",
+        "title": {
+          "zh": "共享专家说明",
+          "en": "Shared Expert Note"
+        },
+        "body": {
+          "zh": "Qwen3 在这个模块上的表达更弱，因此首版只保留说明卡片。",
+          "en": "Qwen3 has a weaker expression on this module, so the first version keeps only a note card."
+        }
+      }
+    ],
+    "decoder_stack": [
+      {
+        "id": "stack-note",
+        "kind": "note",
+        "title": {
+          "zh": "Decoder Stack 说明",
+          "en": "Decoder Stack Note"
+        },
+        "body": {
+          "zh": "Qwen3 的主图更偏中性模板，用于帮助用户快速建立整体结构感。",
+          "en": "Qwen3's main diagram acts more as a neutral template to help readers quickly form a global picture."
+        }
+      }
+    ],
+    "lm_head": []
+  }
+}

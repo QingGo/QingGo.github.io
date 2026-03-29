@@ -1,0 +1,203 @@
+{
+  "provisional": true,
+  "generatedAt": "2026-03-29",
+  "source": "public-summary-placeholders",
+  "moduleStats": {
+    "tokens": [
+      {
+        "id": "token-overview",
+        "kind": "note",
+        "title": {
+          "zh": "词表入口",
+          "en": "Vocabulary Entry"
+        },
+        "body": {
+          "zh": "Kimi-K2 的词表更大，后续适合拿来观察宽覆盖词表对 embedding 空间的影响。",
+          "en": "Kimi-K2's larger vocabulary makes it useful for later studying how wider vocab coverage shapes embedding space."
+        }
+      }
+    ],
+    "embedding": [
+      {
+        "id": "embedding-summary",
+        "kind": "metrics",
+        "title": {
+          "zh": "Embedding / LM Head 摘要",
+          "en": "Embedding / LM Head Summary"
+        },
+        "items": [
+          {"label": {"zh": "对角余弦均值", "en": "Mean Diagonal Cosine"}, "value": "0.84"},
+          {"label": {"zh": "对角余弦中位数", "en": "Median Diagonal Cosine"}, "value": "0.85"},
+          {"label": {"zh": "投影样本数", "en": "Projection Samples"}, "value": "240"}
+        ]
+      },
+      {
+        "id": "embedding-heatmap",
+        "kind": "heatmap",
+        "title": {
+          "zh": "Embedding / LM Head 相似度热图",
+          "en": "Embedding / LM Head Similarity Heatmap"
+        },
+        "rows": ["A0", "A1", "A2", "A3", "A4", "A5"],
+        "cols": ["B0", "B1", "B2", "B3", "B4", "B5"],
+        "values": [
+          [0.89, 0.44, 0.4, 0.33, 0.29, 0.26],
+          [0.42, 0.87, 0.45, 0.35, 0.32, 0.28],
+          [0.38, 0.43, 0.86, 0.37, 0.35, 0.3],
+          [0.31, 0.34, 0.36, 0.88, 0.46, 0.4],
+          [0.28, 0.3, 0.34, 0.43, 0.87, 0.49],
+          [0.24, 0.27, 0.3, 0.39, 0.47, 0.89]
+        ],
+        "note": {
+          "zh": "占位结果故意保留更分散的非对角结构，表达更大词表与更大专家池下的宽分布印象。",
+          "en": "This placeholder keeps a more diffuse off-diagonal pattern to suggest a broader distribution under a larger vocabulary and expert pool."
+        }
+      },
+      {
+        "id": "embedding-projection",
+        "kind": "scatter",
+        "title": {
+          "zh": "Embedding 投影示意",
+          "en": "Embedding Projection Sketch"
+        },
+        "xLabel": "Dim 1",
+        "yLabel": "Dim 2",
+        "points": [
+          {"x": -2.6, "y": 1.0, "label": "tool", "group": "code"},
+          {"x": -2.1, "y": 0.7, "label": "code", "group": "code"},
+          {"x": -1.6, "y": 0.4, "label": "api", "group": "code"},
+          {"x": 2.4, "y": 1.5, "label": "zh", "group": "zh"},
+          {"x": 2.1, "y": 1.1, "label": "字", "group": "zh"},
+          {"x": 1.7, "y": 0.8, "label": "词", "group": "zh"},
+          {"x": 0.0, "y": -2.2, "label": "math", "group": "symbol"},
+          {"x": 0.6, "y": -1.8, "label": "sym", "group": "symbol"},
+          {"x": -0.9, "y": -1.9, "label": "sys", "group": "meta"},
+          {"x": -0.3, "y": -1.5, "label": "ctl", "group": "meta"},
+          {"x": 2.8, "y": -0.1, "label": "eng", "group": "en"},
+          {"x": 2.5, "y": -0.4, "label": "text", "group": "en"}
+        ]
+      }
+    ],
+    "attention": [
+      {
+        "id": "attention-note",
+        "kind": "note",
+        "title": {
+          "zh": "MLA 视角",
+          "en": "MLA View"
+        },
+        "body": {
+          "zh": "Kimi-K2 与 DeepSeek-V3 一样适合从 MLA 角度切入，但页面里更强调“规模更大时会怎样”。",
+          "en": "Like DeepSeek-V3, Kimi-K2 is naturally read through MLA, but this page emphasizes what changes at larger scale."
+        }
+      },
+      {
+        "id": "attention-metrics",
+        "kind": "metrics",
+        "title": {
+          "zh": "Attention 摘要",
+          "en": "Attention Summary"
+        },
+        "items": [
+          {"label": {"zh": "Attention 路线", "en": "Attention Route"}, "value": "MLA"},
+          {"label": {"zh": "上下文长度", "en": "Context"}, "value": "128K"},
+          {"label": {"zh": "观察重点", "en": "Observation Focus"}, "value": "scale"}
+        ]
+      }
+    ],
+    "ffn_or_moe": [
+      {
+        "id": "experts-cosine",
+        "kind": "heatmap",
+        "title": {
+          "zh": "专家矩阵余弦相似度",
+          "en": "Expert Cosine Similarity"
+        },
+        "rows": ["E0", "E1", "E2", "E3", "E4", "E5"],
+        "cols": ["E0", "E1", "E2", "E3", "E4", "E5"],
+        "values": [
+          [1.0, 0.77, 0.68, 0.5, 0.43, 0.39],
+          [0.77, 1.0, 0.72, 0.53, 0.47, 0.42],
+          [0.68, 0.72, 1.0, 0.57, 0.5, 0.45],
+          [0.5, 0.53, 0.57, 1.0, 0.74, 0.69],
+          [0.43, 0.47, 0.5, 0.74, 1.0, 0.78],
+          [0.39, 0.42, 0.45, 0.69, 0.78, 1.0]
+        ]
+      },
+      {
+        "id": "experts-cka",
+        "kind": "heatmap",
+        "title": {
+          "zh": "专家矩阵 CKA",
+          "en": "Expert CKA"
+        },
+        "rows": ["E0", "E1", "E2", "E3", "E4", "E5"],
+        "cols": ["E0", "E1", "E2", "E3", "E4", "E5"],
+        "values": [
+          [1.0, 0.71, 0.61, 0.4, 0.35, 0.31],
+          [0.71, 1.0, 0.64, 0.43, 0.38, 0.34],
+          [0.61, 0.64, 1.0, 0.47, 0.41, 0.37],
+          [0.4, 0.43, 0.47, 1.0, 0.7, 0.66],
+          [0.35, 0.38, 0.41, 0.7, 1.0, 0.73],
+          [0.31, 0.34, 0.37, 0.66, 0.73, 1.0]
+        ]
+      }
+    ],
+    "router": [
+      {
+        "id": "router-note",
+        "kind": "note",
+        "title": {
+          "zh": "Router 待扩展",
+          "en": "Router Placeholder"
+        },
+        "body": {
+          "zh": "在超大专家池背景下，router 的真实分析很有价值，但不适合放进 MVP。",
+          "en": "With such a large expert pool, router analysis would be valuable but does not fit the MVP."
+        }
+      }
+    ],
+    "shared_experts": [
+      {
+        "id": "shared-expert-note",
+        "kind": "note",
+        "title": {
+          "zh": "共享专家说明",
+          "en": "Shared Expert Note"
+        },
+        "body": {
+          "zh": "共享专家模块保留在主图中，便于和 DeepSeek-V3 保持同构对比。",
+          "en": "The shared-expert module stays in the main diagram to preserve isomorphic comparison with DeepSeek-V3."
+        }
+      },
+      {
+        "id": "shared-expert-metrics",
+        "kind": "metrics",
+        "title": {
+          "zh": "共享专家摘要",
+          "en": "Shared Expert Summary"
+        },
+        "items": [
+          {"label": {"zh": "共享专家数", "en": "Shared Experts"}, "value": "1"},
+          {"label": {"zh": "平均相似度", "en": "Mean Similarity"}, "value": "0.59"},
+          {"label": {"zh": "备注", "en": "Remark"}, "value": "placeholder"}
+        ]
+      }
+    ],
+    "decoder_stack": [
+      {
+        "id": "stack-note",
+        "kind": "note",
+        "title": {
+          "zh": "Decoder Stack 说明",
+          "en": "Decoder Stack Note"
+        },
+        "body": {
+          "zh": "统一的 decoder stack 语法让 Kimi-K2 即使规模更大，也不会把页面挤成复杂的工程图。",
+          "en": "A unified decoder-stack grammar keeps Kimi-K2 readable without turning the page into a dense engineering diagram."
+        }
+      }
+    ],
+    "lm_head": []
+  }
+}
