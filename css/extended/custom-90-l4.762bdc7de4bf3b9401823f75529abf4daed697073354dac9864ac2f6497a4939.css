@@ -36,3 +36,4 @@
 #tool-app svg#svg.grabbing {cursor:grabbing}
 #tool-app .l4-tip {position:fixed;z-index:9999;max-width:320px;background:#161a21;color:#e6e6e6;border:1px solid #2a3547;border-radius:6px;padding:8px 10px;font-size:12px;line-height:1.5;pointer-events:none;box-shadow:0 4px 16px rgba(0,0,0,.45)}
 #tool-app .l4-tip-hint {color:#7fd1ff;font-size:11px}
+#tool-app .l4-note {color:#9fb3c8;font-size:12px;margin:6px 0 0}
