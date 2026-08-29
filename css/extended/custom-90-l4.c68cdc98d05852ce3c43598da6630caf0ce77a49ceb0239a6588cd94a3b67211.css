@@ -20,3 +20,19 @@
 #tool-app .tag {display:inline-block;background:#222a36;border-radius:4px;padding:1px 7px;margin:2px;font-size:12px}
 #tool-app .bar {fill:#4f9bff}
 #tool-app .note {color:#8a93a3;font-size:12px;margin:0 0 12px}
+
+#tool-app .l4-legend {margin:10px 0 6px;display:flex;flex-wrap:wrap;gap:6px 12px;align-items:center;font-size:12px}
+#tool-app .l4-legend-title {color:#9fb3c8;line-height:1.6}
+#tool-app .l4-legend-reset {margin-left:auto;cursor:pointer;color:#7fd1ff;border:1px solid #2a3547;border-radius:4px;padding:2px 10px;flex:none}
+#tool-app .l4-legend-reset:hover {background:#1b2432}
+#tool-app .l4-legend-chips {display:flex;flex-wrap:wrap;gap:3px 8px;width:100%;margin-top:2px}
+#tool-app .l4-chip {display:inline-flex;align-items:center;gap:4px;cursor:pointer;padding:1px 7px;border-radius:10px;border:1px solid transparent;color:#c8d2dc;white-space:nowrap}
+#tool-app .l4-chip i {width:9px;height:9px;border-radius:50%;display:inline-block;flex:none}
+#tool-app .l4-chip:hover {background:#1b2432}
+#tool-app .l4-chip.on {border-color:#3a82c8;background:#16283c}
+#tool-app .l4-chip.dim {opacity:.4}
+#tool-app .l4-chip b {color:#8fa3b8;font-weight:normal;font-size:11px}
+#tool-app svg#svg {cursor:grab}
+#tool-app svg#svg.grabbing {cursor:grabbing}
+#tool-app .l4-tip {position:fixed;z-index:9999;max-width:320px;background:#161a21;color:#e6e6e6;border:1px solid #2a3547;border-radius:6px;padding:8px 10px;font-size:12px;line-height:1.5;pointer-events:none;box-shadow:0 4px 16px rgba(0,0,0,.45)}
+#tool-app .l4-tip-hint {color:#7fd1ff;font-size:11px}
